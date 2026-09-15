@@ -18,11 +18,6 @@ class Home extends Component
      */
     public array $actions = [
         [
-            'label' => 'Reserve',
-            'href' => '#reserve',
-            'placeholder' => 'reservation platform not yet connected',
-        ],
-        [
             'label' => 'The Cocktails',
             'href' => '/menu',
             'placeholder' => null,

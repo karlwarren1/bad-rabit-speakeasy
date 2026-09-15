@@ -154,13 +154,6 @@
               class="ph"
               data-ph="age policy copy not yet finalized"
             >TBD</span></li>
-          <li
-            class="reveal"
-            style="--reveal-delay: 0.32s"
-          ><span>Parking</span><span
-              class="ph"
-              data-ph="parking copy not yet finalized"
-            >TBD</span></li>
         </ul>
       </div>
     </div>
