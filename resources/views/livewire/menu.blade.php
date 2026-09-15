@@ -65,13 +65,13 @@
             src="{{ asset('img/' . $plate['img']) }}"
           >
           <div class="menu-item-body reveal">
-            {{-- <div class="row">
+            <div class="row">
               <span class="name">{{ $plate['name'] }}</span>
-              <span
+              {{-- <span
                 class="price ph"
                 data-ph="price not in handoff"
-              >$—</span>
-            </div> --}}
+              >$—</span> --}}
+            </div>
             <p class="ingredients">{{ $plate['spec'] }}</p>
           </div>
         </div>
