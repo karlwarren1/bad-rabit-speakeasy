@@ -7,7 +7,66 @@
       content="width=device-width, initial-scale=1"
       name="viewport"
     >
-    <title>{{ $title ?? 'Bad Rabbit' }}</title>
+    <title>{{ $title ?? 'Bad Rabbit — Bourbon Speakeasy, Cincinnati, Ohio' }}</title>
+
+    {{-- SEO + social preview (Open Graph / Twitter Card). $description can
+         be set per-page from a Livewire component (public $description =
+         '...';) the same way $title is set via #[Title] — falls back to
+         this site-wide default otherwise. --}}
+    <meta
+      content="{{ $description ?? 'A bourbon speakeasy in Cincinnati, Ohio. Curious cocktails, small plates, and a room that doesn\'t announce itself — find the door on Montgomery Rd and follow the stairs down.' }}"
+      name="description"
+    >
+
+    <meta
+      content="website"
+      property="og:type"
+    >
+    <meta
+      content="Bad Rabbit"
+      property="og:site_name"
+    >
+    <meta
+      content="{{ $title ?? 'Bad Rabbit — Bourbon Speakeasy, Cincinnati, Ohio' }}"
+      property="og:title"
+    >
+    <meta
+      content="{{ $description ?? 'A bourbon speakeasy in Cincinnati, Ohio. Curious cocktails, small plates, and a room that doesn\'t announce itself — find the door on Montgomery Rd and follow the stairs down.' }}"
+      property="og:description"
+    >
+    <meta
+      content="{{ asset('img/og-image.jpg') }}"
+      property="og:image"
+    >
+    <meta
+      content="1200"
+      property="og:image:width"
+    >
+    <meta
+      content="630"
+      property="og:image:height"
+    >
+    <meta
+      content="{{ url()->current() }}"
+      property="og:url"
+    >
+
+    <meta
+      content="summary_large_image"
+      name="twitter:card"
+    >
+    <meta
+      content="{{ $title ?? 'Bad Rabbit — Bourbon Speakeasy, Cincinnati, Ohio' }}"
+      name="twitter:title"
+    >
+    <meta
+      content="{{ $description ?? 'A bourbon speakeasy in Cincinnati, Ohio. Curious cocktails, small plates, and a room that doesn\'t announce itself — find the door on Montgomery Rd and follow the stairs down.' }}"
+      name="twitter:description"
+    >
+    <meta
+      content="{{ asset('img/og-image.jpg') }}"
+      name="twitter:image"
+    >
 
     <link
       href="https://fonts.googleapis.com"
