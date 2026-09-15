@@ -55,6 +55,8 @@ class Menu extends Component
         ['name' => 'Crispy Brussels Sprouts', 'spec' => 'Tamarind Glaze · Chili Crisp · Toasted Peanuts', 'img' => 'culinary-1.jpg'],
         ['name' => 'Crab & Avocado', 'spec' => 'Jumbo Lump Crab · Avocado · Citrus · Wontons · Everything Spice', 'img' => 'culinary-3.jpg'],
         ['name' => 'Wagyu After Dark', 'spec' => 'Wagyu Beef Sliders · Caramelized Onion · Aged Cheddar · House Pickles · Bad Rabbit Sauce', 'img' => 'culinary-5.jpg'],
+
+        ['name' => 'Rabbit Bait', 'spec' => 'Dark Chocolate Carrot Cake Truffle · Bourbon Caramel · Brown Butter Pecan · Cream Cheese · Candied Carrot · Sea Salt', 'img' => 'BAD RABBIT - RABBIT BAIT.png'],
     ];
 
     /**

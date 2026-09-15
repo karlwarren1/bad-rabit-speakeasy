@@ -68,6 +68,38 @@
       name="twitter:image"
     >
 
+    <!-- goes inside <head>, right after the <title> tag -->
+    <link
+      href="{{ asset('img/favicon.ico') }}"
+      rel="icon"
+      sizes="any"
+    >
+    <link
+      href="{{ asset('img/favicon-16x16.png') }}"
+      rel="icon"
+      sizes="16x16"
+      type="image/png"
+    >
+    <link
+      href="{{ asset('img/favicon-32x32.png') }}"
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+    >
+    <link
+      href="{{ asset('img/apple-touch-icon.png') }}"
+      rel="apple-touch-icon"
+      sizes="180x180"
+    >
+    <link
+      href="{{ asset('img/site.webmanifest') }}"
+      rel="manifest"
+    >
+    <meta
+      content="#0B0908"
+      name="theme-color"
+    >
+
     <link
       href="https://fonts.googleapis.com"
       rel="preconnect"
