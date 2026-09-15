@@ -30,17 +30,17 @@ class Menu extends Component
         ['name' => 'The Password', 'spec' => 'Reposado Tequila · Pear · Amontillado Sherry · Burnt Honey · Lemon · Sparkling Wine', 'img' => 'BAD RABBIT C_M 9 (mocktail).png'],
 
 
-        ['name' => '', 'spec' => '', 'img' => 'BAD RABBIT C_M 10 (mocktail).png'],
+        // ['name' => '', 'spec' => '', 'img' => 'BAD RABBIT C_M 10 (mocktail).png'],
 
-        ['name' => '', 'spec' => '', 'img' => 'BAD RABBIT C_M 11 (mocktail).png'],
+        // ['name' => '', 'spec' => '', 'img' => 'BAD RABBIT C_M 11 (mocktail).png'],
 
-        ['name' => '', 'spec' => '', 'img' => 'BAD RABBIT C_M 12.png'],
+        // ['name' => '', 'spec' => '', 'img' => 'BAD RABBIT C_M 12.png'],
 
-        ['name' => '', 'spec' => '', 'img' => 'BAD RABBIT C_M 13.png'],
+        // ['name' => '', 'spec' => '', 'img' => 'BAD RABBIT C_M 13.png'],
 
-        ['name' => '', 'spec' => '', 'img' => 'BAD RABBIT C_M 14 (mocktail).png'],
+        // ['name' => '', 'spec' => '', 'img' => 'BAD RABBIT C_M 14 (mocktail).png'],
 
-        ['name' => '', 'spec' => '', 'img' => 'BAD RABBIT C_M 15 (mocktail_).png'],
+        // ['name' => '', 'spec' => '', 'img' => 'BAD RABBIT C_M 15 (mocktail_).png'],
     ];
 
     /**
@@ -49,12 +49,12 @@ class Menu extends Component
      * renderings — representative, not a confirmed pairing.
      */
     public array $provisions = [
-        ['name' => 'Big Dill Energy Deviled Eggs', 'spec' => 'Pickled Dill · Crispy Capers · Chive · Smoked Paprika', 'img' => 'culinary-1.jpg'],
-        ['name' => 'Crab Cake Street Poppers', 'spec' => 'Jumbo Lump Crab · Corn · Red Pepper · Cajun Aioli', 'img' => 'culinary-3.jpg'],
-        ['name' => 'Mac N Cheese Donuts', 'spec' => 'House-Made · Smoked Cheddar · Bacon Jam · Chives', 'img' => 'culinary-5.jpg'],
-        ['name' => 'Crispy Brussels Sprouts', 'spec' => 'Tamarind Glaze · Chili Crisp · Toasted Peanuts', 'img' => 'culinary-1.jpg'],
-        ['name' => 'Crab & Avocado', 'spec' => 'Jumbo Lump Crab · Avocado · Citrus · Wontons · Everything Spice', 'img' => 'culinary-3.jpg'],
-        ['name' => 'Wagyu After Dark', 'spec' => 'Wagyu Beef Sliders · Caramelized Onion · Aged Cheddar · House Pickles · Bad Rabbit Sauce', 'img' => 'culinary-5.jpg'],
+        ['name' => 'Crispy Brussels Sprouts', 'spec' => 'Dijon Aioli · Sliced Almonds · Cotija', 'img' => 'culinary-3.jpg'],
+        ['name' => 'Crab Cake Street Poppers', 'spec' => 'Jumbo Lump Crab · Corn · Red Pepper · Cajun Aioli', 'img' => 'culinary-1.jpg'],
+        ['name' => 'Mac N Cheese Donuts', 'spec' => 'House-Made · Smoked Cheddar · Bacon Jam · Chives', 'img' => 'culinary-2.jpeg'],
+        ['name' => 'Crab Cake Street Poppers', 'spec' => 'Lump Crab Cake Poppers · Chipotle-Lime Crema · Cotija · Cilantro · Chili Crisps', 'img' => 'culinary-4.png'],
+        ['name' => 'Crab & Avocado', 'spec' => 'Jumbo Lump Crab · Avocado · Citrus · Wontons · Everything Spice', 'img' => 'culinary-6.png'],
+        ['name' => 'Wagyu Filet', 'spec' => 'American Wagyu* (4oz) · Smoked Chili- Honey Aioli · Chili Crisp · Pickled Pepper Relish', 'img' => 'culinary-5.jpg'],
 
         ['name' => 'Rabbit Bait', 'spec' => 'Dark Chocolate Carrot Cake Truffle · Bourbon Caramel · Brown Butter Pecan · Cream Cheese · Candied Carrot · Sea Salt', 'img' => 'BAD RABBIT - RABBIT BAIT.png'],
     ];
