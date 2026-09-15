@@ -631,8 +631,7 @@ button:focus-visible {
 .experience-panel img {
   flex: 1 1 50%;
   width: 50%;
-  height: auto;
-  margin: auto;
+  height: 100%;
   object-fit: cover;
   min-height: 340px;
   transition: transform 0.7s cubic-bezier(.2, .7, .3, 1);
