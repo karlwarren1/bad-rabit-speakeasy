@@ -9,14 +9,17 @@
   >
     <div class="hero-frame">
 
-      <img
-        alt="Bad Rabbit — Bourbon Speakeasy, Cincinnati, Ohio"
-        class="hero-logo"
-        src="{{ asset('img/logo-lockup.png') }}"
-      >
+      <div class="hero-top">
+        <p class="hero-tagline left">Good people drink bad things.</p>
 
-      <p class="hero-tagline left">Good people drink bad things.</p>
-      <p class="hero-tagline right">Late nights taste better here.</p>
+        <img
+          alt="Bad Rabbit — Bourbon Speakeasy, Cincinnati, Ohio"
+          class="hero-logo"
+          src="{{ asset('img/logo-lockup.png') }}"
+        >
+
+        <p class="hero-tagline right">Late nights taste better here.</p>
+      </div>
 
       <div class="hero-ctas">
         <a
@@ -121,7 +124,7 @@
         <img
           alt="The Bad Rabbit mascot — a rabbit wearing a gold crown, aviator sunglasses, and a burgundy velvet bow tie."
           class="reveal-img"
-          src="{{ asset('img/Bad Rabbit Rabbit.png') }}"
+          src="{{ asset('img/rabbit-mascot.png') }}"
         >
       </div>
       <div class="reveal">
