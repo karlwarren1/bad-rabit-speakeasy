@@ -124,7 +124,7 @@
         <img
           alt="The Bad Rabbit mascot — a rabbit wearing a gold crown, aviator sunglasses, and a burgundy velvet bow tie."
           class="reveal-img"
-          src="{{ asset('img/rabbit-mascot.png') }}"
+          src="{{ asset('img/Bad Rabbit Rabbit.png') }}"
         >
       </div>
       <div class="reveal">
