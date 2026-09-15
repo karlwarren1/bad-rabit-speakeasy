@@ -1,0 +1,1213 @@
+/* ==========================================================================
+   Bad Rabbit — brand tokens
+   Single dark theme. No light mode — the room doesn't have one.
+   ========================================================================== */
+:root {
+  --black: #0B0908;
+  /* warm black ground — never blue */
+  --coal: #12100E;
+  /* raised surface */
+  --tobacco: #1C1713;
+  /* card / well */
+  --walnut: #3A2C21;
+  /* wood, warm hairlines */
+  --oxblood: #7A1F27;
+  /* the bold move — full bands */
+  --dijon: #C9982B;
+  /* flashes only */
+  --bronze: #9A7B4F;
+  /* kickers, metal */
+  --cream: #E9E0CE;
+  /* primary text */
+  --ash: #8C8177;
+  /* secondary text */
+
+  --font-display: 'Archivo', sans-serif;
+  /* weight 900 = wordmark */
+  --font-body: 'Archivo', sans-serif;
+  /* weight 400/500 = copy */
+  --font-voice: 'Fraunces', serif;
+  /* italic brand-voice lines only */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: var(--black);
+  color: var(--cream);
+  font-family: var(--font-body);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: var(--oxblood);
+  color: var(--cream);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ---- scroll progress bar ---- */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: var(--dijon);
+  z-index: 1000;
+  pointer-events: none;
+}
+
+/* ---- scroll reveal system: fades + rises into place, images also
+   settle in from a slight zoom. Respects prefers-reduced-motion via
+   the global rule above (durations collapse to ~0). ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.9s cubic-bezier(.2, .7, .3, 1), transform 0.9s cubic-bezier(.2, .7, .3, 1);
+  transition-delay: var(--reveal-delay, 0s);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-img {
+  opacity: 0;
+  transform: scale(1.08);
+  transition: opacity 1.1s cubic-bezier(.2, .7, .3, 1), transform 1.3s cubic-bezier(.2, .7, .3, 1);
+  transition-delay: var(--reveal-delay, 0s);
+  will-change: opacity, transform;
+}
+
+.reveal-img.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-wipe {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.9s cubic-bezier(.2, .7, .3, 1);
+  transition-delay: var(--reveal-delay, 0s);
+}
+
+.reveal-wipe.is-visible {
+  transform: scaleX(1);
+}
+
+/* ---- grain overlay: texture + age, no fake parchment ---- */
+.grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+}
+
+/* ---- brand watermark: the logo, faint and pinned in place, behind every
+   page's content. Relative path (not asset()) since this file is plain
+   CSS, not Blade — public/css/ -> public/img/ is just ../img/. ---- */
+.brand-watermark {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url('../img/logo-lockup.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: min(640px, 60vw) auto;
+  opacity: 0.05;
+}
+
+/* ---- top bar: no conventional nav, one word behind everything ---- */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem clamp(1.25rem, 4vw, 3rem);
+  background: linear-gradient(to bottom, rgba(11, 9, 8, 0.85), transparent);
+}
+
+.topbar .nav-group {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.topbar .nav-group a {
+  position: relative;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cream);
+  padding-bottom: 2px;
+}
+
+.topbar .nav-group a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  height: 1px;
+  background: var(--dijon);
+  transition: right 0.3s cubic-bezier(.2, .7, .3, 1);
+}
+
+.topbar .nav-group a:hover::after {
+  right: 0;
+}
+
+@media (max-width: 760px) {
+  .topbar .nav-group a {
+    display: none;
+  }
+}
+
+.topbar button.linklike {
+  background: none;
+  border: none;
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid transparent;
+}
+
+.topbar button.linklike:hover {
+  border-bottom-color: var(--dijon);
+}
+
+.topbar button.linklike:focus-visible,
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--dijon);
+  outline-offset: 3px;
+}
+
+.hamburger {
+  position: relative;
+  z-index: 950;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 34px;
+  height: 34px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+}
+
+.hamburger span {
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: var(--cream);
+  transition: transform 0.35s cubic-bezier(.2, .7, .3, 1), opacity 0.2s ease, width 0.25s ease;
+}
+
+.hamburger:hover span {
+  background: var(--dijon);
+}
+
+.hamburger.is-open span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.is-open span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.ph-toggle {
+  font-size: 0.72rem;
+  color: var(--ash);
+  background: none;
+  border: 1px solid var(--walnut);
+  border-radius: 999px;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  padding: 0.45rem 0.9rem;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.ph-toggle:hover {
+  border-color: var(--bronze);
+  color: var(--cream);
+}
+
+.ph-toggle.active {
+  color: var(--dijon);
+  border-color: var(--dijon);
+}
+
+/* ---- full-screen index overlay: split layout, numbered links, a soft
+   entrance via Alpine's x-transition (bundled with Livewire). ---- */
+.index-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  background: var(--coal);
+  display: grid;
+  grid-template-rows: 1fr auto;
+  padding: clamp(5.5rem, 10vh, 7rem) clamp(1.5rem, 8vw, 6rem) clamp(2rem, 4vh, 3rem);
+}
+
+.idx-enter {
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(.2, .7, .3, 1);
+}
+
+.idx-enter-start {
+  opacity: 0;
+  transform: scale(1.015);
+}
+
+.idx-enter-end {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.idx-leave {
+  transition: opacity 0.25s ease;
+}
+
+.idx-leave-start {
+  opacity: 1;
+}
+
+.idx-leave-end {
+  opacity: 0;
+}
+
+.index-overlay nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.index-overlay nav a {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: clamp(1rem, 3vw, 2rem);
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(2rem, 6.5vw, 4rem);
+  color: var(--cream);
+  padding: 0.3em 0;
+  border-bottom: 1px solid var(--walnut);
+  transition: color 0.25s ease, padding-left 0.3s cubic-bezier(.2, .7, .3, 1);
+  opacity: 0;
+  transform: translateY(18px);
+  animation: idxLinkIn 0.6s cubic-bezier(.2, .7, .3, 1) forwards;
+}
+
+.index-overlay nav a .idx-num {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--walnut);
+  transition: color 0.25s ease;
+}
+
+.index-overlay nav a:hover,
+.index-overlay nav a:focus-visible {
+  color: var(--dijon);
+  padding-left: 0.4em;
+}
+
+.index-overlay nav a:hover .idx-num,
+.index-overlay nav a:focus-visible .idx-num {
+  color: var(--dijon);
+}
+
+.index-overlay nav a:last-child {
+  border-bottom: none;
+}
+
+.index-overlay nav a:nth-child(1) {
+  animation-delay: 0.08s;
+}
+
+.index-overlay nav a:nth-child(2) {
+  animation-delay: 0.14s;
+}
+
+.index-overlay nav a:nth-child(3) {
+  animation-delay: 0.20s;
+}
+
+.index-overlay nav a:nth-child(4) {
+  animation-delay: 0.26s;
+}
+
+.index-overlay nav a:nth-child(5) {
+  animation-delay: 0.32s;
+}
+
+@keyframes idxLinkIn {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.index-overlay .foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  border-top: 1px solid var(--walnut);
+  padding-top: 1.5rem;
+}
+
+.index-overlay .sub {
+  font-family: var(--font-body);
+  color: var(--ash);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .index-overlay nav a {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---- harlequin divider band — max two per page ---- */
+.harlequin {
+  height: 42px;
+  background-image:
+    linear-gradient(45deg, var(--cream) 25%, transparent 25%, transparent 75%, var(--cream) 75%),
+    linear-gradient(45deg, var(--cream) 25%, transparent 25%, transparent 75%, var(--cream) 75%);
+  background-size: 42px 42px;
+  background-position: 0 0, 21px 21px;
+  opacity: 0.085;
+}
+
+/* ---- hero ---- */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  isolation: isolate;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(11, 9, 8, 0.95) 5%, rgba(11, 9, 8, 0.55) 45%, rgba(11, 9, 8, 0.25) 75%);
+  z-index: 0;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 0 clamp(1.25rem, 4vw, 3rem) clamp(3rem, 8vw, 5rem);
+}
+
+.hero .kicker {
+  font-family: var(--font-body);
+  color: var(--bronze);
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  margin-bottom: 0.75rem;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(3rem, 12vw, 8rem);
+  line-height: 0.88;
+  margin: 0;
+  color: var(--cream);
+}
+
+.hero .voice-line {
+  font-family: var(--font-voice);
+  font-style: italic;
+  font-size: clamp(1.1rem, 2.4vw, 1.6rem);
+  color: var(--cream);
+  margin-top: 1rem;
+  max-width: 26ch;
+}
+
+.hero .address {
+  margin-top: 2rem;
+  color: var(--ash);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+}
+
+/* ---- hero v4: full-width, full-bleed cover background (hero-clean.jpg,
+   set inline in the blade), with a slightly dark scrim for text legibility.
+   Logo art + live text sit on top, positioned as a percentage of the
+   viewport rather than a fixed-aspect frame. ---- */
+.hero-wrap {
+  position: relative;
+  min-height: 100svh;
+  width: 100%;
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  isolation: isolate;
+}
+
+.hero-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 9, 8, 0.4);
+  z-index: 1;
+}
+
+.hero-frame {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  min-height: 100svh;
+}
+
+.hero-logo {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(78%, 460px);
+}
+
+.hero-tagline {
+  position: absolute;
+  top: 40%;
+  width: 9ch;
+  font-size: 1.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.55;
+  color: var(--cream);
+  border-top: 1px solid var(--bronze);
+  padding-top: 0.5rem;
+}
+
+.hero-tagline.left {
+  left: 15%;
+}
+
+.hero-tagline.right {
+  right: 15%;
+  text-align: right;
+}
+
+@media (max-width: 560px) {
+  .hero-tagline {
+    display: none;
+  }
+}
+
+.hero-frame .hero-ctas {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0 1.25rem;
+}
+
+.btn-outline {
+  display: inline-block;
+  border: 1px solid var(--bronze);
+  color: var(--cream);
+  padding: 0.9rem 1.75rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: rgba(11, 9, 8, 0.35);
+  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease, letter-spacing 0.25s ease;
+}
+
+.btn-outline:hover {
+  border-color: var(--dijon);
+  background: rgba(11, 9, 8, 0.6);
+  transform: translateY(-2px);
+  letter-spacing: 0.16em;
+}
+
+/* ---- Experience: storytelling panels, alternating image/content ---- */
+.experience-panel {
+  display: flex;
+  min-height: 70vh;
+  overflow: hidden;
+  margin-top: 72px;
+  background-color: #00000091;
+}
+
+.experience-panel.reverse {
+  flex-direction: row-reverse;
+  margin-top: 72px;
+
+  background-color: #00000091;
+}
+
+@media (max-width: 800px) {
+
+  .experience-panel,
+  .experience-panel.reverse {
+    flex-direction: column;
+    min-height: auto;
+  }
+}
+
+.experience-panel img {
+  flex: 1 1 50%;
+  width: 50%;
+  height: auto;
+  margin: auto;
+  object-fit: cover;
+  min-height: 340px;
+  transition: transform 0.7s cubic-bezier(.2, .7, .3, 1);
+}
+
+.experience-panel:hover img {
+  transform: scale(1.045);
+}
+
+@media (max-width: 800px) {
+  .experience-panel img {
+    width: 100%;
+  }
+}
+
+.experience-copy {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(2.5rem, 7vw, 5.5rem);
+  background: var(--coal);
+}
+
+.experience-copy .tag {
+  color: var(--bronze);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  margin-bottom: 1rem;
+}
+
+.experience-copy h3 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  margin: 0 0 1.25rem;
+  line-height: 1.15;
+}
+
+.experience-copy p {
+  color: var(--ash);
+  max-width: 46ch;
+  font-size: 1rem;
+  margin-bottom: 0;
+  line-height: 1.75;
+}
+
+/* ---- Experience: full-bleed image break (no copy panel) ---- */
+.experience-full {
+  position: relative;
+  min-height: 55vh;
+  isolation: isolate;
+}
+
+.experience-full img {
+  width: 100%;
+  height: 100%;
+  min-height: 55vh;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.experience-full::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(11, 9, 8, 0.85), transparent 55%);
+  z-index: 1;
+}
+
+.experience-full .cap {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  min-height: 55vh;
+  display: flex;
+  align-items: flex-end;
+  padding: clamp(2rem, 6vw, 4.5rem);
+  margin: 0;
+  font-family: var(--font-voice);
+  font-style: italic;
+  color: var(--cream);
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+}
+
+/* ---- hero action grid: Reserve / Cocktails / Find the Rabbit / Private Night ---- */
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 900px) {
+  .action-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.action-tile {
+  position: relative;
+  padding: clamp(2.5rem, 7vw, 4.5rem) clamp(1.5rem, 4vw, 2.5rem);
+  border-top: 1px solid var(--walnut);
+  border-right: 1px solid var(--walnut);
+  background: var(--coal);
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.action-tile:hover {
+  background: var(--tobacco);
+  transform: translateY(-5px);
+}
+
+.action-tile:nth-child(4n) {
+  border-right: none;
+}
+
+.action-tile .num {
+  color: var(--walnut);
+  font-size: 0.8rem;
+}
+
+.action-tile .label {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  line-height: 1.1;
+}
+
+.action-tile .arrow {
+  color: var(--dijon);
+  font-size: 1.2rem;
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.action-tile:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* ---- generic section ---- */
+.section {
+  padding: clamp(4rem, 10vw, 7.5rem) clamp(1.5rem, 5vw, 4rem);
+}
+
+.section-tight {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+}
+
+.section h2 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  margin: 0 0 1rem;
+}
+
+.section p.lede {
+  color: var(--ash);
+  max-width: 60ch;
+  font-size: 1.05rem;
+}
+
+.oxblood-band {
+  background: var(--oxblood);
+  color: var(--cream);
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 6vw, 4.5rem);
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+.two-col img {
+  border: 1px solid var(--walnut);
+}
+
+.detail-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+}
+
+.detail-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0.95rem 0;
+  border-bottom: 1px solid var(--walnut);
+  font-size: 0.95rem;
+}
+
+.detail-list li span:first-child {
+  color: var(--ash);
+}
+
+/* ---- footer ---- */
+footer {
+  border-top: 1px solid var(--walnut);
+  padding: 2.5rem clamp(1.25rem, 4vw, 3rem) 3rem;
+  color: var(--ash);
+  font-size: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+footer a:hover {
+  color: var(--dijon);
+}
+
+footer .notes-link {
+  color: var(--walnut);
+  font-size: 0.75rem;
+}
+
+footer .notes-link:hover {
+  color: var(--bronze);
+}
+
+/* ---- placeholder marking, toggled from the top bar ---- */
+.ph {
+  position: relative;
+}
+
+html.show-ph .ph {
+  outline: 1px dashed var(--dijon);
+  outline-offset: 3px;
+  background: rgba(201, 152, 43, 0.08);
+}
+
+html.show-ph .ph::after {
+  content: attr(data-ph);
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  margin-bottom: 4px;
+  background: var(--dijon);
+  color: var(--black);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  white-space: nowrap;
+  z-index: 50;
+}
+
+/* ==========================================================================
+   Menu page
+   ========================================================================== */
+.menu-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(11, 9, 8, 0.92);
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid var(--walnut);
+  display: flex;
+  gap: clamp(1rem, 3vw, 2rem);
+  padding: 1rem clamp(1.25rem, 4vw, 3rem);
+  overflow-x: auto;
+}
+
+.menu-nav a {
+  position: relative;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  color: var(--ash);
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.menu-nav a:hover {
+  color: var(--dijon);
+}
+
+.menu-hero {
+  padding: clamp(3rem, 8vw, 5rem) clamp(1.25rem, 4vw, 3rem) 2rem;
+  text-align: left;
+}
+
+.menu-hero h1 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(2.4rem, 7vw, 4.5rem);
+  margin: 0;
+}
+
+.menu-hero .voice-line {
+  font-family: var(--font-voice);
+  font-style: italic;
+  color: var(--dijon);
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  margin-top: 0.75rem;
+}
+
+.menu-category {
+  padding: clamp(3rem, 8vw, 5.5rem) clamp(1.5rem, 5vw, 4rem);
+}
+
+.menu-category h3 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  color: var(--bronze);
+  margin-bottom: 0.25rem;
+}
+
+.menu-category .sub {
+  color: var(--ash);
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.drink-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 640px;
+}
+
+@media (min-width: 1300px) {
+  .drink-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 4rem;
+    max-width: none;
+  }
+}
+
+/* ---- menu item: thumbnail + name/price/ingredients, side by side —
+   same pattern as thewhiskeyyard.com's menu. Images are representative
+   (see the per-section note), cycled across a small photo set rather
+   than a confirmed 1:1 pairing. This replaces the old text-only .drink
+   rule below, which is now unused by menu.blade.php — left in place
+   in case you're reverting the thumbnail layout, safe to delete otherwise. ---- */
+.menu-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--walnut);
+}
+
+.menu-item img {
+  width: 260px;
+  height: 260px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border: 1px solid var(--walnut);
+  transition: transform 0.5s cubic-bezier(.2, .7, .3, 1);
+}
+
+@media (max-width: 700px) {
+  .menu-item img {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 460px) {
+  .menu-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .menu-item img {
+    width: 100%;
+    height: 220px;
+  }
+}
+
+.menu-item:hover img {
+  transform: scale(1.05);
+}
+
+.menu-item-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.menu-item-body .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.menu-item-body .name {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.05rem;
+}
+
+.menu-item-body .price {
+  color: var(--dijon);
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.menu-item-body .ingredients {
+  color: var(--ash);
+  font-size: 0.88rem;
+  margin-top: 0.35rem;
+}
+
+.drink {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--walnut);
+}
+
+.drink .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.drink .name {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.05rem;
+}
+
+.drink .price {
+  color: var(--dijon);
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.drink .ingredients {
+  color: var(--ash);
+  font-size: 0.88rem;
+  margin-top: 0.35rem;
+}
+
+.spirit-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem 4rem;
+}
+
+@media (max-width: 750px) {
+  .spirit-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.spirit-columns h4 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  color: var(--bronze);
+  border-bottom: 1px solid var(--walnut);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.spirit-columns ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  column-count: 1;
+}
+
+.spirit-columns li {
+  font-size: 0.92rem;
+  padding: 0.3rem 0;
+  color: var(--cream);
+}
+
+.gallery-strip {
+  display: flex;
+  gap: 1px;
+  background: var(--walnut);
+  margin: 0;
+  overflow: hidden;
+}
+
+.gallery-strip img {
+  flex: 1 1 0;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(.2, .7, .3, 1);
+}
+
+.gallery-strip img:hover {
+  transform: scale(1.06);
+}
+
+.gallery-note {
+  font-size: 0.75rem;
+  color: var(--walnut);
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/* ==========================================================================
+   Build notes page — internal only, remove before launch
+   ========================================================================== */
+.notes-banner {
+  background: var(--oxblood);
+  color: var(--cream);
+  text-align: center;
+  padding: 0.6rem 1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+.notes-wrap {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 6rem;
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.notes-wrap h1 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+}
+
+.notes-wrap h2 {
+  font-family: var(--font-body);
+  color: var(--dijon);
+  font-size: 1rem;
+  margin-top: 2.5rem;
+  border-bottom: 1px solid var(--walnut);
+  padding-bottom: 0.4rem;
+}
+
+.token-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.token-table td,
+.token-table th {
+  border-bottom: 1px solid var(--walnut);
+  padding: 0.4rem 0.6rem;
+  text-align: left;
+}
+
+.swatch {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--walnut);
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.notes-wrap ul {
+  padding-left: 1.2rem;
+}
+
+.notes-wrap .status-ok {
+  color: #8fae7a;
+}
+
+.notes-wrap .status-todo {
+  color: var(--dijon);
+}

@@ -1,0 +1,25 @@
+{
+    "name": "badrabbit/speakeasy-site",
+    "type": "project",
+    "description": "Bad Rabbit Speakeasy — marketing site (Home + Menu) built on Laravel, Bootstrap 5, and Livewire.",
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^11.0",
+        "livewire/livewire": "^3.5"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.13",
+        "laravel/sail": "^1.26"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
