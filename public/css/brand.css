@@ -682,8 +682,10 @@ button:focus-visible {
 /* ---- Experience: full-bleed image break (no copy panel) ---- */
 .experience-full {
   position: relative;
-  min-height: 55vh;
+  min-height: 100vh;
   isolation: isolate;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .experience-full img {
