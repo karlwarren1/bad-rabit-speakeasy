@@ -120,7 +120,7 @@
       rel="stylesheet"
     >
     <link
-      href="{{ asset('css/brand.css') }}"
+      href="{{ asset('css/brand.css') }}?v={{ now()->timestamp }}"
       rel="stylesheet"
     >
 
