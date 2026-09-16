@@ -22,12 +22,16 @@ class Menu extends Component
         ['name' => 'Bad Decisions', 'spec' => 'Bourbon · Black Cherry · Amaro · Lemon · Cinnamon · Smoked Wood', 'img' => 'BAD RABBIT C_M 1.png'],
         ['name' => 'Velvet Rope', 'spec' => 'Vodka · Passion Fruit · Vanilla · Lime · Prosecco Float', 'img' => 'BAD RABBIT C_M 2.png'],
         ['name' => 'Down the Rabbit Hole', 'spec' => 'Gin · Cucumber · Elderflower · Lemon · Absinthe Rinse', 'img' => 'BAD RABBIT C_M 3.png'],
-        ['name' => 'Smoke & Mirrors', 'spec' => 'Mezcal · Aperol · Blood Orange · Agave · Smoked Citrus', 'img' => 'BAD RABBIT C_M 4.png'],
+        ['name' => 'Smoke & Mirrors', 'spec' => 'Mezcal · Aperol · Blood Orange · Agave · Smoked Citrus', 'img' => 'BAD RABBIT C_M 15 (mocktail_).png'],
         ['name' => 'Good Trouble', 'spec' => 'Rye Whiskey · Pineapple · Cinnamon · Angostura · Tiki Bitters', 'img' => 'BAD RABBIT C_M 5.png'],
-        ['name' => "One More Won't Hurt", 'spec' => 'Buffalo Trace · Apple · Cinnamon · Lemon · Clarified Milk Punch · Flamed Apple', 'img' => 'BAD RABBIT C_M 6.png'],
+        ['name' => "One More Won't Hurt", 'spec' => 'Buffalo Trace · Apple · Cinnamon · Lemon · Clarified Milk Punch · Flamed Apple', 'img' => 'BAD RABBIT C_M 13.png'],
         ['name' => 'Best Kept Secret', 'spec' => 'Tequila · Blackberry · Jalapeño · Lime · Black Lava Salt', 'img' => 'BAD RABBIT C_M 7.png'],
         ['name' => "We're All Mad Here", 'spec' => 'Gin · Blue Curaçao · Coconut · Pineapple · Lemon · Color Change · Buzz Button', 'img' => 'BAD RABBIT C_M 8.png'],
-        ['name' => 'The Password', 'spec' => 'Reposado Tequila · Pear · Amontillado Sherry · Burnt Honey · Lemon · Sparkling Wine', 'img' => 'BAD RABBIT C_M 9 (mocktail).png'],
+        ['name' => 'The Password', 'spec' => 'Reposado Tequila · Pear · Amontillado Sherry · Burnt Honey · Lemon · Sparkling Wine', 'img' => 'BAD RABBIT C_M 12.png'],
+
+        ['name' => 'After Midnight', 'spec' => '', 'img' => 'BAD RABBIT C_M 12.png'],
+
+        ['name' => 'Scratch This One', 'spec' => '', 'img' => 'BAD RABBIT C_M 4.png'],
 
 
         // ['name' => '', 'spec' => '', 'img' => 'BAD RABBIT C_M 10 (mocktail).png'],
@@ -64,10 +68,10 @@ class Menu extends Component
      * cycle through the two available mocktail renderings.
      */
     public array $zeroProof = [
-        ['name' => 'Clean Getaway', 'spec' => 'Passion Fruit · Lime · Ginger · Sparkling Mineral Water', 'img' => 'mocktail-9.jpg'],
-        ['name' => 'The Lookout', 'spec' => 'Blackberry · Sage · Lemon · Black Tea · Honey · Sparkling Water', 'img' => 'mocktail-15.jpg'],
-        ['name' => 'Undercover', 'spec' => 'Pineapple · Coconut · Lime · Cinnamon · Angostura-Style Zero-Proof Bitters', 'img' => 'mocktail-9.jpg'],
-        ['name' => 'Off the Record', 'spec' => 'Pear · Burnt Honey · Lemon · Rosemary · Sparkling Wine Alternative', 'img' => 'mocktail-15.jpg'],
+        ['name' => 'Clean Getaway', 'spec' => 'Passion Fruit · Lime · Ginger · Sparkling Mineral Water', 'img' => 'BAD RABBIT C_M 9 (mocktail).png'],
+        ['name' => 'The Lookout', 'spec' => 'Blackberry · Sage · Lemon · Black Tea · Honey · Sparkling Water', 'img' => 'BAD RABBIT C_M 14 (mocktail).png'],
+        ['name' => 'Undercover', 'spec' => 'Pineapple · Coconut · Lime · Cinnamon · Angostura-Style Zero-Proof Bitters', 'img' => 'BAD RABBIT C_M 10 (mocktail).png'],
+        ['name' => 'Off the Record', 'spec' => 'Pear · Burnt Honey · Lemon · Rosemary · Sparkling Wine Alternative', 'img' => 'BAD RABBIT C_M 11 (mocktail).png'],
     ];
 
     /** Bourbons & Whiskeys, grouped as on the source sheet. */
