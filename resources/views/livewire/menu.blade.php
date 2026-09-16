@@ -112,7 +112,7 @@
 
   {{-- ZERO PROOF --}}
   <section
-    class="menu-category oxblood-band"
+    class="menu-category"
     id="zero-proof"
   >
     <h3 style="color: var(--dijon);">Zero Proof</h3>

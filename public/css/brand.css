@@ -20,6 +20,7 @@
   --cream: #E9E0CE;
   /* primary text */
   --ash: #8C8177;
+  --antique-gold: #B59E5F;
   /* secondary text */
 
   --font-display: 'Archivo', sans-serif;
@@ -805,6 +806,11 @@ button:focus-visible {
 
 .oxblood-band {
   background: var(--oxblood);
+  color: var(--cream);
+}
+
+.antique-gold-band {
+  background: var(--antique-gold);
   color: var(--cream);
 }
 

@@ -141,12 +141,16 @@
             style="--reveal-delay: 0.08s"
           ><span>Phone</span><span><a href="tel:+15138555467">(513) 855-5467</a></span></li>
           <li
-            class="reveal"
-            style="--reveal-delay: 0.16s"
+            class="revea"
+            style="--reveal-delay: 0.16s;align-items: center;"
           ><span>Hours</span><span
               class="ph"
               data-ph="hours not yet finalized"
-            >TBD</span></li>
+              style="text-align: end;"
+            >BR<br>
+              Sunday: 4-11pm<br>
+              Monday-Thursday: 4-1am<br>
+              Fri & Sat 4pm-2am</span></li>
           <li
             class="reveal"
             style="--reveal-delay: 0.24s"
