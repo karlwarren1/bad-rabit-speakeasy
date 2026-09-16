@@ -29,9 +29,8 @@ class Menu extends Component
         ['name' => "We're All Mad Here", 'spec' => 'Gin · Blue Curaçao · Coconut · Pineapple · Lemon · Color Change · Buzz Button', 'img' => 'BAD RABBIT C_M 8.png'],
         ['name' => 'The Password', 'spec' => 'Reposado Tequila · Pear · Amontillado Sherry · Burnt Honey · Lemon · Sparkling Wine', 'img' => 'BAD RABBIT C_M 12.png'],
 
-        ['name' => 'After Midnight', 'spec' => '', 'img' => 'BAD RABBIT C_M 6.png'],
+        ['name' => 'After Midnight', 'spec' => 'Vodka · Coffee Liqueur · Espresso · Agave · Saline Solution', 'img' => 'BAD RABBIT C_M 6.png'],
 
-        ['name' => 'Scratch This One', 'spec' => '', 'img' => 'BAD RABBIT C_M 4.png'],
 
 
         // ['name' => '', 'spec' => '', 'img' => 'BAD RABBIT C_M 10 (mocktail).png'],
