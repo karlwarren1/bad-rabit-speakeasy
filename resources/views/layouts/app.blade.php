@@ -114,6 +114,11 @@
       rel="stylesheet"
     >
 
+    <meta
+      content="VHxX_FUSELunBsFtKnZZNPglsbSg21Foee1CwBTsckk"
+      name="google-site-verification"
+    />
+
     {{-- Bootstrap 5 via CDN: grid + utilities only. Brand tokens in brand.css win on everything visual. --}}
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
