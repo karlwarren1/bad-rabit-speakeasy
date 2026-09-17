@@ -129,13 +129,13 @@
             src="{{ asset('img/' . $drink['img']) }}"
           >
           <div class="menu-item-body reveal">
-            {{-- <div class="row">
+            <div class="row">
               <span class="name">{{ $drink['name'] }}</span>
-              <span
+              {{-- <span
                 class="price ph"
                 data-ph="price not in handoff"
-              >$—</span>
-            </div> --}}
+              >$—</span> --}}
+            </div>
             <p
               class="ingredients"
               style="color: rgba(233,224,206,.65);"
