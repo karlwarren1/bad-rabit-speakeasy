@@ -221,12 +221,6 @@
           href="#"
         >badrabbitcincy.com</a>
       </div>
-      <div>
-        <a
-          class="notes-link"
-          href="{{ route('build-notes') }}"
-        >Build notes ↴</a>
-      </div>
     </footer>
 
     @livewireScripts

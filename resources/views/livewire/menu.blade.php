@@ -49,12 +49,52 @@
     </div>
   </section>
 
+  {{-- ZERO PROOF --}}
+  <section
+    class="menu-category"
+    id="zero-proof"
+  >
+    <h3>Mocktails</h3>
+    <p
+      class="sub"
+      style="color: rgba(233,224,206,.7);"
+    >Curious libations. No alibi required.</p>
+    <div class="drink-grid">
+      @foreach ($zeroProof as $drink)
+        <div class="menu-item">
+          <img
+            alt="A Bad Rabbit zero-proof drink, shot dark and close on marble."
+            class="reveal-img"
+            src="{{ asset('img/' . $drink['img']) }}"
+          >
+          <div class="menu-item-body reveal">
+            <div class="row">
+              <span class="name">{{ $drink['name'] }}</span>
+              {{-- <span
+                class="price ph"
+                data-ph="price not in handoff"
+              >$—</span> --}}
+            </div>
+            <p
+              class="ingredients"
+              style="color: rgba(233,224,206,.65);"
+            >{{ $drink['spec'] }}</p>
+          </div>
+        </div>
+      @endforeach
+    </div>
+    <p
+      class="voice-line"
+      style="margin-top: 2rem;"
+    >Good people drink bad things. Sometimes without the booze.</p>
+  </section>
+
   {{-- PROVISIONS --}}
   <section
     class="menu-category"
     id="provisions"
   >
-    <h3>Provisions</h3>
+    <h3>Food</h3>
     <p class="sub">Small plates for late nights and good company.</p>
     <div class="drink-grid">
       @foreach ($provisions as $plate)
@@ -66,7 +106,7 @@
           >
           <div class="menu-item-body reveal">
             <div class="row">
-              <span class="name">{{ $plate['name'] }}</span>
+              <span class="name">{{ str($plate['name'])->title }}</span>
               {{-- <span
                 class="price ph"
                 data-ph="price not in handoff"
@@ -110,43 +150,33 @@
     </div>
   </section>
 
-  {{-- ZERO PROOF --}}
+  {{-- PROVISIONS --}}
   <section
     class="menu-category"
-    id="zero-proof"
+    id="provisions"
   >
-    <h3 style="color: var(--dijon);">Zero Proof</h3>
-    <p
-      class="sub"
-      style="color: rgba(233,224,206,.7);"
-    >Curious libations. No alibi required.</p>
+    <h3>BOURBON FLIGHTS</h3>
+    <p class="sub">3 ea. 1 oz. pours</p>
     <div class="drink-grid">
-      @foreach ($zeroProof as $drink)
+      @foreach ($bourbonFlights as $plate)
         <div class="menu-item">
           <img
-            alt="A Bad Rabbit zero-proof drink, shot dark and close on marble."
+            alt="A Bad Rabbit small plate, shot dark and close on marble."
             class="reveal-img"
-            src="{{ asset('img/' . $drink['img']) }}"
+            src="{{ asset('img/' . $plate['img']) }}"
           >
           <div class="menu-item-body reveal">
             <div class="row">
-              <span class="name">{{ $drink['name'] }}</span>
+              <span class="name">{{ str($plate['name'])->title }}</span>
               {{-- <span
                 class="price ph"
                 data-ph="price not in handoff"
               >$—</span> --}}
             </div>
-            <p
-              class="ingredients"
-              style="color: rgba(233,224,206,.65);"
-            >{{ $drink['spec'] }}</p>
+            <p class="ingredients">{{ $plate['spec'] }}</p>
           </div>
         </div>
       @endforeach
     </div>
-    <p
-      class="voice-line"
-      style="margin-top: 2rem;"
-    >Good people drink bad things. Sometimes without the booze.</p>
   </section>
 </div>

@@ -958,8 +958,9 @@ html.show-ph .ph::after {
   font-family: var(--font-display);
   font-weight: 900;
   font-size: clamp(1.5rem, 3vw, 2.1rem);
-  color: var(--bronze);
+  color: var(--oxblood);
   margin-bottom: 0.25rem;
+  text-transform: uppercase;
 }
 
 .menu-category .sub {
