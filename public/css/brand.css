@@ -1,10 +1,10 @@
 /* ==========================================================================
-   Bad Rabbit â€” brand tokens
-   Single dark theme. No light mode â€” the room doesn't have one.
+   Bad Rabbit — brand tokens
+   Single dark theme. No light mode — the room doesn't have one.
    ========================================================================== */
 :root {
   --black: #0B0908;
-  /* warm black ground â€” never blue */
+  /* warm black ground — never blue */
   --coal: #12100E;
   /* raised surface */
   --tobacco: #1C1713;
@@ -12,7 +12,7 @@
   --walnut: #3A2C21;
   /* wood, warm hairlines */
   --oxblood: #7A1F27;
-  /* the bold move â€” full bands */
+  /* the bold move — full bands */
   --dijon: #C9982B;
   /* flashes only */
   --bronze: #9A7B4F;
@@ -20,6 +20,7 @@
   --cream: #E9E0CE;
   /* primary text */
   --ash: #8C8177;
+  --antique-gold: #B59E5F;
   /* secondary text */
 
   --font-display: 'Archivo', sans-serif;
@@ -145,7 +146,7 @@ img {
 
 /* ---- brand watermark: the logo, faint and pinned in place, behind every
    page's content. Relative path (not asset()) since this file is plain
-   CSS, not Blade â€” public/css/ -> public/img/ is just ../img/. ---- */
+   CSS, not Blade — public/css/ -> public/img/ is just ../img/. ---- */
 .brand-watermark {
   position: fixed;
   inset: 0;
@@ -436,7 +437,7 @@ button:focus-visible {
   }
 }
 
-/* ---- harlequin divider band â€” max two per page ---- */
+/* ---- harlequin divider band — max two per page ---- */
 .harlequin {
   height: 42px;
   background-image:
@@ -685,15 +686,15 @@ button:focus-visible {
 /* ---- Experience: full-bleed image break (no copy panel) ---- */
 .experience-full {
   position: relative;
-  min-height: 55vh;
+  min-height: 100vh;
   isolation: isolate;
 }
 
 .experience-full img {
   width: 100%;
   height: 100%;
-  min-height: 55vh;
-  object-fit: cover;
+  min-height: 100vh;
+  object-fit: contain;
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -725,7 +726,7 @@ button:focus-visible {
 /* ---- hero action grid: Reserve / Cocktails / Find the Rabbit / Private Night ---- */
 .action-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 @media (max-width: 900px) {
@@ -808,6 +809,11 @@ button:focus-visible {
   color: var(--cream);
 }
 
+.antique-gold-band {
+  background: var(--antique-gold);
+  color: var(--cream);
+}
+
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -833,7 +839,6 @@ button:focus-visible {
 
 .detail-list li {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
   padding: 0.95rem 0;
@@ -953,8 +958,9 @@ html.show-ph .ph::after {
   font-family: var(--font-display);
   font-weight: 900;
   font-size: clamp(1.5rem, 3vw, 2.1rem);
-  color: var(--bronze);
+  color: var(--oxblood);
   margin-bottom: 0.25rem;
+  text-transform: uppercase;
 }
 
 .menu-category .sub {
@@ -978,11 +984,11 @@ html.show-ph .ph::after {
   }
 }
 
-/* ---- menu item: thumbnail + name/price/ingredients, side by side â€”
+/* ---- menu item: thumbnail + name/price/ingredients, side by side —
    same pattern as thewhiskeyyard.com's menu. Images are representative
    (see the per-section note), cycled across a small photo set rather
    than a confirmed 1:1 pairing. This replaces the old text-only .drink
-   rule below, which is now unused by menu.blade.php â€” left in place
+   rule below, which is now unused by menu.blade.php — left in place
    in case you're reverting the thumbnail layout, safe to delete otherwise. ---- */
 .menu-item {
   display: flex;
@@ -1147,7 +1153,7 @@ html.show-ph .ph::after {
 }
 
 /* ==========================================================================
-   Build notes page â€” internal only, remove before launch
+   Build notes page — internal only, remove before launch
    ========================================================================== */
 .notes-banner {
   background: var(--oxblood);
@@ -1214,6 +1220,7 @@ html.show-ph .ph::after {
 .notes-wrap .status-todo {
   color: var(--dijon);
 }
+
 
 /* ---- Private Event inquiry form ---- */
 .pe-form {
