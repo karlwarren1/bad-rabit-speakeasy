@@ -4,8 +4,9 @@
     "description": "Bad Rabbit Speakeasy — marketing site (Home + Menu) built on Laravel, Bootstrap 5, and Livewire.",
     "require": {
         "php": "^8.2",
-        "laravel/framework": "^11.0",
-        "livewire/livewire": "^3.5"
+        "laravel/framework": "^13.0",
+        "livewire/livewire": "^4.0",
+        "resend/resend-php": "^1.15"
     },
     "require-dev": {
         "laravel/pint": "^1.13",
