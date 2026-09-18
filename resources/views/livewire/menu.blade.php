@@ -20,12 +20,6 @@
     id="libations"
   >
     <h3>Libations</h3>
-    <p class="sub">Curious drinks for well-behaved outlaws.
-      <span
-        class="ph"
-        data-ph="drink-to-photo pairing pending Karl's name confirmation, per the Sept 2026 memo — shown here as representative, not a literal match"
-      >Photos shown are representative.</span>
-    </p>
     <div class="drink-grid">
       @foreach ($cocktails as $drink)
         <div class="menu-item">
@@ -94,7 +88,7 @@
     class="menu-category"
     id="provisions"
   >
-    <h3>Food</h3>
+    <h3>PROVISIONS</h3>
     <p class="sub">Small plates for late nights and good company.</p>
     <div class="drink-grid">
       @foreach ($provisions as $plate)
@@ -131,7 +125,7 @@
     class="menu-category"
     id="spirits"
   >
-    <h3>Bourbons &amp; Whiskeys</h3>
+    <h3>Bourbons &amp; Whiskeys &amp; Beer</h3>
     <p class="sub">Rare finds. Bold pours. No regrets. <span
         class="ph"
         data-ph="pour sizes/pricing (the bourbon pour list) not in handoff"
@@ -150,31 +144,22 @@
     </div>
   </section>
 
-  {{-- PROVISIONS --}}
+  {{-- BOURBONS & WHISKEYS --}}
   <section
     class="menu-category"
-    id="provisions"
+    id="spirits"
   >
     <h3>BOURBON FLIGHTS</h3>
     <p class="sub">3 ea. 1 oz. pours</p>
-    <div class="drink-grid">
-      @foreach ($bourbonFlights as $plate)
-        <div class="menu-item">
-          <img
-            alt="A Bad Rabbit small plate, shot dark and close on marble."
-            class="reveal-img"
-            src="{{ asset('img/' . $plate['img']) }}"
-          >
-          <div class="menu-item-body reveal">
-            <div class="row">
-              <span class="name">{{ str($plate['name'])->title }}</span>
-              {{-- <span
-                class="price ph"
-                data-ph="price not in handoff"
-              >$—</span> --}}
-            </div>
-            <p class="ingredients">{{ $plate['spec'] }}</p>
-          </div>
+    <div class="spirit-columns">
+      @foreach ($bourbonFlights as $group => $list)
+        <div>
+          <h4>{{ $group }}</h4>
+          <ul>
+            @foreach ($list as $item)
+              <li>{{ $item }}</li>
+            @endforeach
+          </ul>
         </div>
       @endforeach
     </div>

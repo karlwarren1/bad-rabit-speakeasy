@@ -148,16 +148,16 @@
               data-ph="hours not yet finalized"
               style="text-align: end;"
             >BR<br>
-              Sunday: 4-11pm<br>
-              Monday-Thursday: 4-1am<br>
-              Fri & Sat 4pm-2am</span></li>
+              Sunday: 4pm - 11pm<br>
+              Monday-Thursday: 4pm - 1am<br>
+              Fri & Sat 4pm - 2am</span></li>
           <li
             class="reveal"
             style="--reveal-delay: 0.24s"
           ><span>Age policy</span><span
               class="ph"
               data-ph="age policy copy not yet finalized"
-            >TBD</span></li>
+            >21 +</span></li>
         </ul>
       </div>
     </div>
@@ -180,19 +180,7 @@
         style="color: var(--cream); opacity: .85;"
       >The room, the bar, the rabbit — to yourselves. Built for the kind of night people don't fully explain the next
         day.</p>
-      <ul
-        class="detail-list"
-        style="border-color: rgba(233,224,206,.25);"
-      >
-        <li><span>Capacity</span><span
-            class="ph"
-            data-ph="capacity not in handoff text"
-          >TBD</span></li>
-        <li><span>Minimum spend</span><span
-            class="ph"
-            data-ph="illustrative only, not final pricing"
-          >TBD</span></li>
-      </ul>
+      <livewire:private-event-form />
     </div>
   </section>
 </div>

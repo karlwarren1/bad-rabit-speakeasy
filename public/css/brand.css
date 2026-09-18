@@ -1,10 +1,10 @@
 /* ==========================================================================
-   Bad Rabbit — brand tokens
-   Single dark theme. No light mode — the room doesn't have one.
+   Bad Rabbit â€” brand tokens
+   Single dark theme. No light mode â€” the room doesn't have one.
    ========================================================================== */
 :root {
   --black: #0B0908;
-  /* warm black ground — never blue */
+  /* warm black ground â€” never blue */
   --coal: #12100E;
   /* raised surface */
   --tobacco: #1C1713;
@@ -12,7 +12,7 @@
   --walnut: #3A2C21;
   /* wood, warm hairlines */
   --oxblood: #7A1F27;
-  /* the bold move — full bands */
+  /* the bold move â€” full bands */
   --dijon: #C9982B;
   /* flashes only */
   --bronze: #9A7B4F;
@@ -20,7 +20,6 @@
   --cream: #E9E0CE;
   /* primary text */
   --ash: #8C8177;
-  --antique-gold: #B59E5F;
   /* secondary text */
 
   --font-display: 'Archivo', sans-serif;
@@ -146,7 +145,7 @@ img {
 
 /* ---- brand watermark: the logo, faint and pinned in place, behind every
    page's content. Relative path (not asset()) since this file is plain
-   CSS, not Blade — public/css/ -> public/img/ is just ../img/. ---- */
+   CSS, not Blade â€” public/css/ -> public/img/ is just ../img/. ---- */
 .brand-watermark {
   position: fixed;
   inset: 0;
@@ -437,7 +436,7 @@ button:focus-visible {
   }
 }
 
-/* ---- harlequin divider band — max two per page ---- */
+/* ---- harlequin divider band â€” max two per page ---- */
 .harlequin {
   height: 42px;
   background-image:
@@ -686,15 +685,15 @@ button:focus-visible {
 /* ---- Experience: full-bleed image break (no copy panel) ---- */
 .experience-full {
   position: relative;
-  min-height: 100vh;
+  min-height: 55vh;
   isolation: isolate;
 }
 
 .experience-full img {
   width: 100%;
   height: 100%;
-  min-height: 100vh;
-  object-fit: contain;
+  min-height: 55vh;
+  object-fit: cover;
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -726,7 +725,7 @@ button:focus-visible {
 /* ---- hero action grid: Reserve / Cocktails / Find the Rabbit / Private Night ---- */
 .action-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 @media (max-width: 900px) {
@@ -809,11 +808,6 @@ button:focus-visible {
   color: var(--cream);
 }
 
-.antique-gold-band {
-  background: var(--antique-gold);
-  color: var(--cream);
-}
-
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -839,6 +833,7 @@ button:focus-visible {
 
 .detail-list li {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
   padding: 0.95rem 0;
@@ -958,9 +953,8 @@ html.show-ph .ph::after {
   font-family: var(--font-display);
   font-weight: 900;
   font-size: clamp(1.5rem, 3vw, 2.1rem);
-  color: var(--oxblood);
+  color: var(--bronze);
   margin-bottom: 0.25rem;
-  text-transform: uppercase;
 }
 
 .menu-category .sub {
@@ -984,11 +978,11 @@ html.show-ph .ph::after {
   }
 }
 
-/* ---- menu item: thumbnail + name/price/ingredients, side by side —
+/* ---- menu item: thumbnail + name/price/ingredients, side by side â€”
    same pattern as thewhiskeyyard.com's menu. Images are representative
    (see the per-section note), cycled across a small photo set rather
    than a confirmed 1:1 pairing. This replaces the old text-only .drink
-   rule below, which is now unused by menu.blade.php — left in place
+   rule below, which is now unused by menu.blade.php â€” left in place
    in case you're reverting the thumbnail layout, safe to delete otherwise. ---- */
 .menu-item {
   display: flex;
@@ -1153,7 +1147,7 @@ html.show-ph .ph::after {
 }
 
 /* ==========================================================================
-   Build notes page — internal only, remove before launch
+   Build notes page â€” internal only, remove before launch
    ========================================================================== */
 .notes-banner {
   background: var(--oxblood);
@@ -1219,4 +1213,99 @@ html.show-ph .ph::after {
 
 .notes-wrap .status-todo {
   color: var(--dijon);
+}
+
+/* ---- Private Event inquiry form ---- */
+.pe-form {
+  margin-top: 2.5rem;
+  max-width: 911px;
+  margin: 0 auto;
+}
+
+.pe-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.25rem;
+}
+
+@media (max-width: 560px) {
+  .pe-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pe-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.pe-field label {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cream);
+  opacity: 0.75;
+  margin-bottom: 0.5rem;
+}
+
+.pe-optional {
+  text-transform: none;
+  letter-spacing: 0;
+  opacity: 0.7;
+}
+
+.pe-field input,
+.pe-field textarea {
+  background: rgba(11, 9, 8, 0.35);
+  border: 1px solid rgba(233, 224, 206, 0.3);
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.75rem 0.9rem;
+  resize: vertical;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.pe-field input:focus,
+.pe-field textarea:focus {
+  outline: none;
+  border-color: var(--dijon);
+  background: rgba(11, 9, 8, 0.55);
+}
+
+.pe-field input::placeholder,
+.pe-field textarea::placeholder {
+  color: rgba(233, 224, 206, 0.45);
+}
+
+.pe-error {
+  color: #e7b0a8;
+  font-size: 0.8rem;
+  margin-top: 0.4rem;
+}
+
+.pe-submit {
+  margin-top: 0.5rem;
+  border-color: var(--cream);
+  cursor: pointer;
+}
+
+.pe-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.pe-success .voice-line {
+  color: var(--cream);
+  margin-top: 2.5rem;
+}
+
+/* honeypot â€” invisible to sighted users and screen readers, present for bots */
+.pe-hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }

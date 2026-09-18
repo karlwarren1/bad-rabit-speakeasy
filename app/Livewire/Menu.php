@@ -19,7 +19,7 @@ class Menu extends Component
      * the Sept 2026 memo referenced in Build Notes).
      */
     public array $cocktails = [
-        ['name' => 'Bad Decisions', 'spec' => '792 Small Batch · Amaro Averna · Black Cherry Syrup · Cacao · Orange', 'img' => 'BAD RABBIT C_M 1.png'],
+        ['name' => 'Bad Decisions', 'spec' => '1792 Small Batch · Amaro Averna · Black Cherry Syrup · Cacao · Orange', 'img' => 'BAD RABBIT C_M 1.png'],
         ['name' => 'Velvet Rope', 'spec' => 'Brown-Butter-Washed Bourbon · Fig Syrup · Black Walnut Liqueur · Angostura', 'img' => 'BAD RABBIT C_M 2.png'],
         ['name' => 'Down the Rabbit Hole', 'spec' => 'Rabbit Hole · Oloroso Sherry · Pure Maple Syrup Fresh Espresso · Black Walnut · Angostura', 'img' => 'BAD RABBIT C_M 3.png'],
         ['name' => 'Smoke & Mirrors', 'spec' => 'Mezcal · Tequila Blanco · Cynar · Lime · Raspberry · Egg White', 'img' => 'BAD RABBIT C_M 15 (mocktail_).png'],
@@ -27,7 +27,7 @@ class Menu extends Component
         ['name' => "One More Won't Hurt", 'spec' => 'Small Batch Bourbon · Apple Cider · Cinnamon Syrup · Fresh Lemon Juice', 'img' => 'BAD RABBIT C_M 13.png'],
         ['name' => 'Best Kept Secret', 'spec' => 'Reposado · Fresh Blood Orange Juice · Lime · Agave · Ancho Chile Liqueur', 'img' => 'BAD RABBIT C_M 7.png'],
         ['name' => "We're All Mad Here", 'spec' => 'Empress Gin · Lychee Liqueur · St. Germain · Ginger Syrup · Yuzu · Acid Pour', 'img' => 'BAD RABBIT C_M 8.png'],
-        ['name' => 'The Password', 'spec' => 'Reposado, Pear Liqueur · Honey Simple · Fresh Lemon · Angostura · Prosecco · Candied Pear', 'img' => 'BAD RABBIT C_M 12.png'],
+        ['name' => 'The Password', 'spec' => 'Reposado · Pear Liqueur · Honey Simple · Fresh Lemon · Angostura · Prosecco · Candied Pear', 'img' => 'BAD RABBIT C_M 12.png'],
 
         ['name' => 'After Midnight', 'spec' => 'Wheatley Vodka · Fresh Espresso · Cold Brew Liqueur · Agave · Saline', 'img' => 'BAD RABBIT C_M 6.png'],
     ];
@@ -46,7 +46,7 @@ class Menu extends Component
 
         ['name' => 'Mac N Cheese Donuts', 'spec' => 'Sweet & Spicy Bacon · Habanero Maple Syrup', 'img' => 'culinary-2.jpeg'],
 
-        ['name' => 'Crispy Brussels Sprouts', 'spec' => 'Dijon · Aioli · Sliced Almonds · Cotija', 'img' => 'culinary-3.jpg'],
+        ['name' => 'Crispy Brussels Sprouts', 'spec' => 'Dijon Aioli · Sliced Almonds · Cotija', 'img' => 'culinary-3.jpg'],
 
         ['name' => 'Crab & Avocado', 'spec' => 'Chilled Jumbo Lump Crab · Avocado · Lime · Serrano · Chili Crisp · Sesame Wonton Crisp · Crispy Shallots', 'img' => 'culinary-6.png'],
 
@@ -60,7 +60,7 @@ class Menu extends Component
      * cycle through the two available mocktail renderings.
      */
     public array $zeroProof = [
-        ['name' => 'Clean Getaway', 'spec' => 'Passion Fruit, Lime · Ginger Syrup · Simple · Sparkling Mineral Water · Mint Sprig', 'img' => 'BAD RABBIT C_M 9 (mocktail).png'],
+        ['name' => 'Clean Getaway', 'spec' => 'Passion Fruit · Lime · Ginger Syrup · Simple · Sparkling Mineral Water · Mint Sprig', 'img' => 'BAD RABBIT C_M 9 (mocktail).png'],
         ['name' => 'The Lookout', 'spec' => 'Fresh Blackberry · Lemon · Rosemary · Ginger Cranberry · Egg White · Saline · Mint', 'img' => 'BAD RABBIT C_M 14 (mocktail).png'],
         ['name' => 'Undercover', 'spec' => 'Apple Cider · Fresh Lemon Juice · Ginger Syrup · Cinnamon · Sparkling Mineral Water', 'img' => 'BAD RABBIT C_M 10 (mocktail).png'],
         ['name' => 'Off the Record', 'spec' => 'Fresh Strawberry · Fresh Lime Juice · Hibiscus · Agave · Tajín', 'img' => 'BAD RABBIT C_M 11 (mocktail).png'],
@@ -233,12 +233,19 @@ class Menu extends Component
         'CANNED BEER' => [
             'Ask the team about our rotating selection',
         ],
+
     ];
 
     public array $bourbonFlights = [
-        ['name' => 'THE KENTUCKY THREE', 'spec' => 'New Riff KY Straight · Russell’s Reserve 10 Yr. · Rowan’s Creek', 'img' => 'Bad Rabbit Rabbit.png'],
-        ['name' => 'THE RABBIT’S RESERVE', 'spec' => 'Rabbit Hole Dareringer · Rabbit Hole Cavehill · Rabbit Hole Heigold', 'img' => 'Bad Rabbit Rabbit.png'],
-        ['name' => 'RYE NOT', 'spec' => 'Rittenhouse · Sazerac · Michter’s', 'img' => 'Bad Rabbit Rabbit.png'],
+        'THE KENTUCKY THREE' => [
+            'New Riff KY Straight · Russell’s Reserve 10 Yr. · Rowan’s Creek',
+        ],
+        'THE RABBIT’S RESERVE' => [
+            'Rabbit Hole Dareringer · Rabbit Hole Cavehill · Rabbit Hole Heigold',
+        ],
+        'RYE NOT' => [
+            'Rittenhouse · Sazerac · Michter’s',
+        ],
     ];
 
     public function render()
