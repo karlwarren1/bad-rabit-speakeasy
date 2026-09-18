@@ -38,7 +38,7 @@ class Menu extends Component
      * renderings — representative, not a confirmed pairing.
      */
     public array $provisions = [
-        ['name' => 'BIG DILL ENERGY DEVILED EGGS', 'spec' => 'Creamy Deviled Eggs · Dill Pickle · Pickle Brine · Sweet & Spicy Bacon · Paprika · Dill Pickle Chip', 'img' => 'culinary-3.jpg'],
+        ['name' => 'BIG DILL ENERGY DEVILED EGGS', 'spec' => 'Creamy Deviled Eggs · Dill Pickle · Pickle Brine · Sweet & Spicy Bacon · Paprika · Dill Pickle Chip', 'img' => 'Bad Rabbit Rabbit.png'],
 
         ['name' => 'Crab Cake Street Poppers', 'spec' => 'Lump Crab Cake Poppers · Chipotle-Lime Crema · Cotija · Cilantro · Chili Crisps', 'img' => 'culinary-4.png'],
 
