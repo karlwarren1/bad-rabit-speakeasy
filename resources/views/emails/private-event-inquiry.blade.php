@@ -8,6 +8,14 @@
       name="viewport"
     >
     <title>New Private Event Inquiry</title>
+    <meta
+      content="light only"
+      name="color-scheme"
+    >
+    <meta
+      content="light only"
+      name="supported-color-schemes"
+    >
   </head>
 
   <body style="margin:0; padding:0; background-color:#0B0908; font-family: Georgia, 'Times New Roman', serif;">
@@ -32,7 +40,8 @@
             <tr>
               <td
                 align="center"
-                style="background-color: #7A1F27; padding: 28px 24px;"
+                bgcolor="#7A1F27"
+                style="background-color:#7A1F27; padding: 28px 24px;"
               >
                 <img
                   alt="Bad Rabbit"
