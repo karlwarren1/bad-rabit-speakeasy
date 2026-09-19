@@ -36,11 +36,11 @@ class PrivateEventForm extends Component
 
     /** These three addresses get every submission. */
     protected array $recipients = [
-        // 'chad.hart@epicb.com',
-        // 'amanda.flood@agaveandrye.com',
-        // 'gavin.mullen@agaveandrye.com',
-        'karlwarrengaas@gmail.com',
-        'karl.gaas@agaveandrye.com',
+        'chad.hart@epicb.com',
+        'amanda.flood@agaveandrye.com',
+        'gavin.mullen@agaveandrye.com',
+        // 'karlwarrengaas@gmail.com',
+        // 'karl.gaas@agaveandrye.com',
     ];
 
     public function submit(): void
