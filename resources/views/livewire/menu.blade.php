@@ -1,14 +1,4 @@
 <div>
-  <nav
-    aria-label="Menu sections"
-    class="menu-nav"
-  >
-    <a href="#libations">Libations</a>
-    <a href="#provisions">Provisions</a>
-    <a href="#spirits">Bourbons &amp; Whiskeys</a>
-    <a href="#zero-proof">Zero Proof</a>
-  </nav>
-
   <div class="menu-hero">
     <h1>The Menu</h1>
     <p class="voice-line">Late nights taste better here.</p>
