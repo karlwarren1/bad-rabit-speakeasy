@@ -2,7 +2,6 @@
   <nav
     aria-label="Menu sections"
     class="menu-nav"
-    style=" margin-top: 4rem"
   >
     <a href="#libations">Libations</a>
     <a href="#provisions">Provisions</a>

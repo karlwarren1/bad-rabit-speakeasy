@@ -906,10 +906,10 @@ html.show-ph .ph::after {
    ========================================================================== */
 .menu-nav {
   position: sticky;
-  top: 0;
+  top: 50px;
   z-index: 100;
-  background: rgba(11, 9, 8, 0.92);
-  backdrop-filter: blur(4px);
+  margin-top: 4rem;
+  background: rgb(11 9 8 / 0%);
   border-bottom: 1px solid var(--walnut);
   display: flex;
   gap: clamp(1rem, 3vw, 2rem);
@@ -921,7 +921,7 @@ html.show-ph .ph::after {
   position: relative;
   font-size: 0.85rem;
   letter-spacing: 0.06em;
-  color: var(--ash);
+  color: var(--cream);
   white-space: nowrap;
   transition: color 0.2s ease;
 }
