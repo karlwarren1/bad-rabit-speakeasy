@@ -147,8 +147,7 @@
               class="ph"
               data-ph="hours not yet finalized"
               style="text-align: end;"
-            >BR<br>
-              Sunday: 4pm - 11pm<br>
+            >Sunday: 4pm - 11pm<br>
               Monday-Thursday: 4pm - 1am<br>
               Fri & Sat 4pm - 2am</span></li>
           <li
