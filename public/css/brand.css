@@ -915,6 +915,7 @@ html.show-ph .ph::after {
   gap: clamp(1rem, 3vw, 2rem);
   padding: 1rem clamp(1.25rem, 4vw, 3rem);
   overflow-x: auto;
+  z-index: 501;
 }
 
 .menu-nav a {

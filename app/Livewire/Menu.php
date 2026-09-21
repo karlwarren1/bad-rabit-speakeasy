@@ -38,21 +38,21 @@ class Menu extends Component
      * renderings — representative, not a confirmed pairing.
      */
     public array $provisions = [
-        ['name' => 'BIG DILL ENERGY DEVILED EGGS', 'spec' => 'Creamy Deviled Eggs · Dill Pickle · Pickle Brine · Sweet & Spicy Bacon · Paprika · Dill Pickle Chip', 'img' => 'Bad Rabbit Rabbit.png'],
+        ['name' => 'BIG DILL ENERGY DEVILED EGGS', 'spec' => 'Creamy Deviled Eggs · Dill Pickle · Pickle Brine · Sweet & Spicy Bacon · Paprika · Dill Pickle Chip', 'img' => 'Big Dill Energy Deviled Eggs.JPG'],
 
-        ['name' => 'Crab Cake Street Poppers', 'spec' => 'Lump Crab Cake Poppers · Chipotle-Lime Crema · Cotija · Cilantro · Chili Crisps', 'img' => 'culinary-4.png'],
+        ['name' => 'Crab Cake Street Poppers', 'spec' => 'Lump Crab Cake Poppers · Chipotle-Lime Crema · Cotija · Cilantro · Chili Crisps', 'img' => 'Crab cake Street Poppers.JPG'],
 
         // ['name' => 'Crab Cake Street Poppers', 'spec' => 'Jumbo Lump Crab · Corn · Red Pepper · Cajun Aioli', 'img' => 'culinary-1.jpg'],
 
-        ['name' => 'Mac N Cheese Donuts', 'spec' => 'Sweet & Spicy Bacon · Habanero Maple Syrup', 'img' => 'culinary-2.jpeg'],
+        ['name' => 'Mac N Cheese Donuts', 'spec' => 'Sweet & Spicy Bacon · Habanero Maple Syrup', 'img' => 'Mac N Cheese Donuts.JPG'],
 
-        ['name' => 'Crispy Brussels Sprouts', 'spec' => 'Dijon Aioli · Sliced Almonds · Cotija', 'img' => 'culinary-3.jpg'],
+        ['name' => 'Crispy Brussels Sprouts', 'spec' => 'Dijon Aioli · Sliced Almonds · Cotija', 'img' => 'Crispy Brussel Sprouts.JPG'],
 
-        ['name' => 'Crab & Avocado', 'spec' => 'Chilled Jumbo Lump Crab · Avocado · Lime · Serrano · Chili Crisp · Sesame Wonton Crisp · Crispy Shallots', 'img' => 'culinary-6.png'],
+        ['name' => 'Crab & Avocado', 'spec' => 'Chilled Jumbo Lump Crab · Avocado · Lime · Serrano · Chili Crisp · Sesame Wonton Crisp · Crispy Shallots', 'img' => 'Crab & Avacado.JPG'],
 
-        ['name' => 'Wagyu After Dark', 'spec' => 'American Wagyu · Smoked Chili-Honey Aioli · Soy-Lime Glaze · Pickled Pepper Relish · Chili Crisp · Scallions ', 'img' => 'culinary-5.jpg'],
+        ['name' => 'Wagyu After Dark', 'spec' => 'American Wagyu · Smoked Chili-Honey Aioli · Soy-Lime Glaze · Pickled Pepper Relish · Chili Crisp · Scallions ', 'img' => 'Wagyu After Dark.JPG'],
 
-        ['name' => 'Rabbit Bait', 'spec' => 'Dark Chocolate Carrot Cake Truffle · Bourbon Caramel · Brown Butter Pecan Crunch · Cream Cheese Cream · Candied Carrot · Edible Gold · Flaky Sea Salt ', 'img' => 'BAD RABBIT - RABBIT BAIT.png'],
+        ['name' => 'Rabbit Bait', 'spec' => 'Dark Chocolate Carrot Cake Truffle · Bourbon Caramel · Brown Butter Pecan Crunch · Cream Cheese Cream · Candied Carrot · Edible Gold · Flaky Sea Salt ', 'img' => 'Rabbit Bait.JPG'],
     ];
 
     /**
