@@ -57,7 +57,7 @@
       <img
         alt="A rose-painted stairway leading down to Bad Rabbit's red door, marked Down the Rabbit Hole."
         class="reveal-img"
-        src="{{ asset('img/stairwell.jpg') }}"
+        src="{{ asset('img/IMG_0951 (1).JPG') }}"
       >
       <div class="experience-copy reveal">
         <p class="tag">The Way In</p>
@@ -80,13 +80,14 @@
       <img
         alt="A plate of deviled eggs plated dark and close on marble, with a lit candle beside it."
         class="reveal-img"
-        src="{{ asset('img/culinary-1.jpg') }}"
+        src="{{ asset('img/IMG_0547.JPG') }}"
       >
       <div class="experience-copy reveal">
         <p class="tag">The Kitchen</p>
         <h3>Small plates, built for a long night.</h3>
-        <p>Late-kitchen food meant to sit next to a cocktail, not compete with it — deviled eggs, crab poppers, wagyu
-          sliders, all shot dark and close, the way the room actually feels.</p>
+        <p>Late-kitchen food made to pair with the night, not compete with the cocktail — Big Dill Energy Deviled Eggs,
+          Crab Cake Street Poppers, Mac & Cheese Donuts, and Wagyu After Dark, all shot dark and close to capture the
+          intimate, after-hours feel of the room.</p>
       </div>
     </div>
   </div>
