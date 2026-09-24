@@ -39,6 +39,9 @@ class PrivateEventForm extends Component
         'chad.hart@epicb.com',
         'amanda.flood@agaveandrye.com',
         'gavin.mullen@agaveandrye.com',
+        'lindsay.newberry@agaveandrye.com',
+        'kailie.yeager@agaveandrye.com',
+        'benjamin.wilson@tokyopie.com',
         // 'karlwarrengaas@gmail.com',
         // 'karl.gaas@agaveandrye.com',
     ];
