@@ -43,7 +43,7 @@
       <img
         alt="The bar at Bad Rabbit, lined with leather stools under crystal chandeliers, bottles stacked behind a gilded rabbit mural."
         class="reveal-img"
-        src="{{ asset('img/hero-bar.jpg') }}"
+        src="{{ asset('img/BR Website photo.png') }}"
       >
       <div class="experience-copy reveal">
         <p class="tag">The Room</p>
