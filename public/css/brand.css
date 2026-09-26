@@ -1317,3 +1317,69 @@ html.show-ph .ph::after {
   height: 1px;
   overflow: hidden;
 }
+
+/* ---- About Us — Menu page closer ---- */
+.about-us {
+  text-align: center;
+}
+
+.about-flourish {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.about-flourish span:not(.about-dot) {
+  display: block;
+  width: 56px;
+  height: 1px;
+  background: var(--bronze);
+}
+
+.about-flourish .about-dot {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  background: var(--dijon);
+  transform: rotate(45deg);
+}
+
+.about-heading {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  letter-spacing: 0.02em;
+  color: var(--dijon);
+  margin: 0 0 2rem;
+}
+
+.about-copy {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.about-copy p {
+  color: var(--cream);
+  opacity: 0.9;
+  font-size: 1.02rem;
+  line-height: 1.85;
+  margin: 0 0 1.5rem;
+}
+
+.about-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.about-tagline {
+  display: inline-block;
+  margin-top: 2.5rem;
+  color: var(--oxblood);
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.65rem 1.4rem;
+}

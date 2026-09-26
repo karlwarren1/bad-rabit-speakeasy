@@ -21,15 +21,15 @@ class Menu extends Component
     public array $cocktails = [
         ['name' => 'Bad Decisions', 'spec' => '1792 Small Batch · Amaro Averna · Black Cherry Syrup · Cacao · Orange', 'img' => 'BAD RABBIT C_M 1.png'],
         ['name' => 'Velvet Rope', 'spec' => 'Brown-Butter-Washed Bourbon · Fig Syrup · Black Walnut Liqueur · Angostura', 'img' => 'BAD RABBIT C_M 2.png'],
-        ['name' => 'Down the Rabbit Hole', 'spec' => 'Rabbit Hole · Oloroso Sherry · Pure Maple Syrup Fresh Espresso · Black Walnut · Angostura', 'img' => 'BAD RABBIT C_M 3.png'],
+        ['name' => 'Down the Rabbit Hole', 'spec' => 'Rabbit Hole · Oloroso Sherry · Maple · Fresh Espresso · Black Walnut · Angostura', 'img' => 'BAD RABBIT C_M 3.png'],
         ['name' => 'Smoke & Mirrors', 'spec' => 'Mezcal · Tequila Blanco · Cynar · Lime · Raspberry · Egg White', 'img' => 'BAD RABBIT C_M 15 (mocktail_).png'],
         ['name' => 'Good Trouble', 'spec' => 'Rabbit Hole Heigold High Rye · Fresh Lemon Juice · Rosemary & Ginger Syrups · Blackberry', 'img' => 'BAD RABBIT C_M 5.png'],
-        ['name' => "One More Won't Hurt", 'spec' => 'Small Batch Bourbon · Apple Cider · Cinnamon Syrup · Fresh Lemon Juice', 'img' => 'BAD RABBIT C_M 13.png'],
+        ['name' => "One More Won't Hurt", 'spec' => 'Small Batch Bourbon · Apple Cider · Cinnamon · Fresh Lemon Juice', 'img' => 'BAD RABBIT C_M 13.png'],
         ['name' => 'Best Kept Secret', 'spec' => 'Reposado · Fresh Blood Orange Juice · Lime · Agave · Ancho Chile Liqueur', 'img' => 'BAD RABBIT C_M 7.png'],
         ['name' => "We're All Mad Here", 'spec' => 'Empress Gin · Lychee Liqueur · St. Germain · Ginger Syrup · Yuzu · Acid Pour', 'img' => 'BAD RABBIT C_M 8.png'],
         ['name' => 'The Password', 'spec' => 'Reposado · Pear Liqueur · Honey Simple · Fresh Lemon · Angostura · Prosecco · Candied Pear', 'img' => 'BAD RABBIT C_M 12.png'],
 
-        ['name' => 'After Midnight', 'spec' => 'Wheatley Vodka · Fresh Espresso · Cold Brew Liqueur · Agave · Saline', 'img' => 'BAD RABBIT C_M 6.png'],
+        ['name' => 'After Midnight', 'spec' => 'Wheatley Vodka · Fresh Espresso · Cold Brew Liqueur · Agave · Saline', 'img' => 'BAD RABBIT C_M 6.png', 'aka' => 'AKA “Te Hey Michelle”'],
     ];
 
     /**
@@ -46,7 +46,7 @@ class Menu extends Component
 
         ['name' => 'Mac N Cheese Donuts', 'spec' => 'Sweet & Spicy Bacon · Habanero Maple Syrup', 'img' => 'Mac N Cheese Donuts.JPG'],
 
-        ['name' => 'Crispy Brussels Sprouts', 'spec' => 'Dijon Aioli · Sliced Almonds · Cotija', 'img' => 'Crispy Brussel Sprouts.JPG'],
+        ['name' => 'Crispy Brussels Sprouts', 'spec' => 'Dijon · Aioli · Sliced Almonds · Cotija', 'img' => 'Crispy Brussel Sprouts.JPG'],
 
         ['name' => 'Crab & Avocado', 'spec' => 'Chilled Jumbo Lump Crab · Avocado · Lime · Serrano · Chili Crisp · Sesame Wonton Crisp · Crispy Shallots', 'img' => 'Crab & Avacado.JPG'],
 
@@ -207,8 +207,8 @@ class Menu extends Component
             'Jameson',
             'Redbreast 12',
             'Redbreast 12 Cask',
-            'Teeling Small Batch 11',
-            'Tullamore Dew 8',
+            'Teeling Small Batch',
+            'Tullamore Dew',
             'Writer’s Tears Copper Pot',
         ],
         'American Whiskey' => [
@@ -233,18 +233,158 @@ class Menu extends Component
         'CANNED BEER' => [
             'Ask the team about our rotating selection',
         ],
+        'TEQUILA – SILVER' => [
+            '123 Organic Uno   17',
+            '1800',
+            'Avion',
+            'Cabo Wabo',
+            'Casa Dragones',
+            'Casa Noble',
+            'Casamigos',
+            'Cazadores',
+            'Clase Azul',
+            'Codigo',
+            'Corazón',
+            'Don Julio',
+            'El Jimador',
+            'Espolòn',
+            'Exotico',
+            'G4',
+            'Herradura',
+            'Hornitos',
+            'Jose Cuervo',
+            'Lunazul',
+            'Milagro',
+            'Patrón',
+            'Rey Supremo',
+            'Siete Leguas',
+            'Teremana',
+            'Tres Agaves',
+        ],
+        'TEQUILA – REPOSADO' => [
+            '123 Organic Dos',
+            '1800',
+            'Avion',
+            'Cabo Wabo',
+            'Cantera Negra',
+            'Casamigos',
+            'Cazadores',
+            'Cincoro',
+            'Clase Azul',
+            'Codigo',
+            'Corazón',
+            'Don Julio',
+            'Espolòn',
+            'Hornitos',
+            'Jose Cuervo',
+            'Milagro',
+            'Patrón',
+            'Rey Supremo',
+            'Teremana',
+        ],
+        'TEQUILA – AÑEJO' => [
+            'Cantera Negra',
+            'Casamigos',
+            'Codigo',
+            'Corazón',
+            'Don Julio 1942',
+            'Don Julio 70',
+            'El Jimador',
+            'Espolòn',
+            'Jose Cuervo Reserva de Familia',
+            'Komos Cristalino',
+            'Maestro Dobel Diamante',
+            'Patrón',
+            'Patrón Extra',
+            'Rey Supremo',
+        ],
+        'MEZCAL' => [
+            'Bozal Ensemble',
+            'Bozal Single Magueys',
+            'Casamigos',
+            'Codigo 1530',
+            'Del Maguey Vida',
+            'Ilegal Joven',
+            'Los Siete Misterios Doba-Yej',
+            'Montelobos',
+        ],
+        'VODKA' => [
+            'Absolut',
+            'Absolut Citron',
+            'Buckeye',
+            'Grey Goose',
+            'Ketel One',
+            'Tito’s',
+            'Wheatley',
+        ],
+        'GIN' => [
+            'Bombay Sapphire',
+            'Hendrick’s',
+            'Roku Japanese',
+            'Tanqueray',
+        ],
+        'RUM' => [
+            'Bacardi',
+            'Captain Morgan',
+            'Diplomatico Reserva',
+            'Malibu Coconut',
+        ],
+        'WINE' => [
+            'EVE CHARDONNAY',
+            'BOOM BOOM SYRAH',
+            'CHATEAU SMITH CABERNET',
+            'KUNG FU GIRL RIESLING',
+            'BAND OF ROSES ROS',
+        ],
+        'CORDIALS' =>
+        [
+            'Baileys',
+            'Campari',
+            'Chambord',
+            'Disaronno',
+            'D’ussé VSOP',
+            'Frangelico',
+            'Grand Marnier',
+            'Hennessy',
+            'Kahlúa',
+            'See the Elephant',
+        ],
+        'COFFEE' =>
+        [
+            'Espresso',
+            'Cappuccino',
+            'Americano',
+        ],
+
 
     ];
 
     public array $bourbonFlights = [
-        'THE KENTUCKY THREE' => [
-            'New Riff KY Straight · Russell’s Reserve 10 Yr. · Rowan’s Creek',
+        'THE KENTUCKY FOUR' => [
+            'Bufalo Trace · Elmer T. Lee · Blanton’s · E. H. Taylor Small Batch',
         ],
         'THE RABBIT’S RESERVE' => [
-            'Rabbit Hole Dareringer · Rabbit Hole Cavehill · Rabbit Hole Heigold',
+            'Rabbit Hole Dareringer · Rabbit Hole Cavehill · Rabbit Hole Heigold · Rabbit Hole Boxergrail
+',
         ],
         'RYE NOT' => [
-            'Rittenhouse · Sazerac · Michter’s',
+            'Rittenhouse · Sazerac · Michter’s · Minor Case',
+        ],
+    ];
+
+    public array $coffeeCocktails = [
+        'AFTER MIDNIGH' => [
+            'Wheatley Vodka · Fresh Espresso · Cold Brew  Liqueur · Agave · Saline',
+        ],
+        'THE NIGHTCAP' => [
+            'Bourbon · Fresh Espresso · Mr. Black · 
+Brown-Butter Demerara · Black Walnut',
+        ],
+        'BAD HABIT' => [
+            'Reposado · Fresh Espresso · Cacao · Cinnamon',
+        ],
+        'UP ALL NIGHT' => [
+            'Cognac · Fresh Espresso · Averna · Demerara · Orange',
         ],
     ];
 

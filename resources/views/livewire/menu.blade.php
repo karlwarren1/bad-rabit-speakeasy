@@ -30,7 +30,8 @@
           >
           <div class="menu-item-body reveal">
             <div class="row">
-              <span class="name">{{ $drink['name'] }}</span>
+              <span class="name">{{ $drink['name'] }} <br><i
+                  style="font-size: 12px;">{{ $drink['aka'] ?? '' }}</i></span>
               {{-- <span
                 class="price ph"
                 data-ph="price not in handoff"
@@ -133,7 +134,13 @@
     <div class="spirit-columns">
       @foreach ($spirits as $group => $list)
         <div>
-          <h4>{{ $group }}</h4>
+          <h4>
+            {{ $group }}
+            @if ($group == 'WINE')
+              <br><i style="font-size: 12px;">Charles Smith Collection</i>
+            @endif
+          </h4>
+
           <ul>
             @foreach ($list as $item)
               <li>{{ $item }}</li>
@@ -158,10 +165,60 @@
           <ul>
             @foreach ($list as $item)
               <li>{{ $item }}</li>
+              @if ($group == 'RYE NOT')
+                <i style="font-size: 12px;">Each selection is a rye whiskey</i>
+              @endif
             @endforeach
           </ul>
         </div>
       @endforeach
     </div>
+  </section>
+
+  {{-- COFFEE COCKTAILS --}}
+  <section
+    class="menu-category"
+    id="spirits"
+  >
+    <h3>COFFEE COCKTAILS</h3>
+    <div class="spirit-columns">
+      @foreach ($coffeeCocktails as $group => $list)
+        <div>
+          <h4>{{ $group }}</h4>
+          <ul>
+            @foreach ($list as $item)
+              <li>{{ $item }}</li>
+              @if ($group == 'AFTER MIDNIGHT')
+                <i style="font-size: 12px;">AKA “Te Hey Michelle”
+                </i>
+              @endif
+            @endforeach
+          </ul>
+        </div>
+      @endforeach
+    </div>
+  </section>
+
+  {{-- ABOUT US --}}
+  <section
+    class="section about-us"
+    id="about-us"
+  >
+    <div
+      class="about-flourish"
+      role="presentation"
+    ><span></span><span class="about-dot"></span><span></span></div>
+    <h2 class="about-heading">About Us</h2>
+    <div class="about-copy">
+      <p>Bad Rabbit is a bourbon-forward speakeasy tucked beneath the streets of Cincinnati's Pleasant Ridge
+        neighborhood. Hidden behind an unassuming entrance and down a rose-lined stairway, Bad Rabbit was created for
+        late nights, good drinks, and even better company.</p>
+      <p>Inside, crystal chandeliers, a harlequin floor, and an expansive bourbon collection set the scene for an
+        intimate experience centered around thoughtfully crafted cocktails, an extensive whiskey selection, and small
+        plates designed for nights as long as you want them.</p>
+      <p>A little mysterious and intentionally unexpected, Bad Rabbit is the kind of place you have to know to
+        find&mdash;and once you're in, you'll want to stay awhile.</p>
+    </div>
+    <p class="about-tagline">Good people drink bad things.</p>
   </section>
 </div>
