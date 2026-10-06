@@ -129,6 +129,7 @@
       rel="stylesheet"
     >
     <script type="application/ld+json">
+@verbatim
 {"@context":"https://schema.org","@type":"BarOrPub","name":"Bad Rabbit","description":"Bourbon speakeasy",
 "url":"https://badrabbitspeakeasy.com/","telephone":"+1-513-855-5467",
 "address":{"@type":"PostalAddress","streetAddress":"6112 Montgomery Rd","addressLocality":"Cincinnati","addressRegion":"OH","postalCode":"45213","addressCountry":"US"},
@@ -138,8 +139,8 @@
 {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"16:00","closes":"01:00"},
 {"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"16:00","closes":"02:00"}],
 "parentOrganization":{"@type":"Organization","name":"EPIC Brands","url":"https://www.epicb.com/"}}
+@endverbatim
 </script>
-
     @livewireStyles
   </head>
 
