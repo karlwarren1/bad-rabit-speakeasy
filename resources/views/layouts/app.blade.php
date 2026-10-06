@@ -128,6 +128,17 @@
       href="{{ asset('css/brand.css') }}?v={{ now()->timestamp }}"
       rel="stylesheet"
     >
+    <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BarOrPub","name":"Bad Rabbit","description":"Bourbon speakeasy",
+"url":"https://badrabbitspeakeasy.com/","telephone":"+1-513-855-5467",
+"address":{"@type":"PostalAddress","streetAddress":"6112 Montgomery Rd","addressLocality":"Cincinnati","addressRegion":"OH","postalCode":"45213","addressCountry":"US"},
+"priceRange":"$$","menu":"https://badrabbitspeakeasy.com/menu",
+"openingHoursSpecification":[
+{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"16:00","closes":"23:00"},
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"16:00","closes":"01:00"},
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"16:00","closes":"02:00"}],
+"parentOrganization":{"@type":"Organization","name":"EPIC Brands","url":"https://www.epicb.com/"}}
+</script>
 
     @livewireStyles
   </head>
@@ -217,9 +228,9 @@
         >Instagram</a> &middot;
         <a
           class="ph"
-          data-ph="domain is a stand-in: badrabbitcincy.com"
-          href="#"
-        >badrabbitcincy.com</a>
+          data-ph="domain is a stand-in: badrabbitspeakeasy.com"
+          href="https://badrabbitspeakeasy.com"
+        >badrabbitspeakeasy.com</a>
       </div>
     </footer>
 
